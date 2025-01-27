@@ -27,6 +27,7 @@ a {
 }
 
 #sidebar {
+    position: sticky;
     max-height: 100vdh;
     height: 100dvh;
     max-width: 264px;
@@ -123,9 +124,9 @@ a.sidebar-link.active{
     font-size: .9rem;
 }
 
-/* Screen size less than 768px */
+/* Screen size less than 1200px */
 
-@media (max-width:768px) {
+@media (max-width:1200px) {
 
     .sidebar-toggle {
         margin-left: -264px;

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminNavigationController;
+use App\Http\Controllers\StaticDataController;
 
 // Pages Route
 Route::get('/', [AdminNavigationController::class, 'showLogin'])->name('login');
@@ -12,3 +13,7 @@ Route::get('/admin/books-report', [AdminNavigationController::class, 'showBooksR
 Route::get('/admin/damaged-books', [AdminNavigationController::class, 'showDamagedBooks'])->name('admin.damagedBooks');
 Route::get('/admin/members-report', [AdminNavigationController::class, 'showMemberReport'])->name('admin.memberReport');
 Route::get('/admin/audit-log', [AdminNavigationController::class, 'showAuditLog'])->name('admin.auditLog');
+Route::get('/admin/profile', [AdminNavigationController::class, 'showProfile'])->name('admin.profile');
+
+Route::get('/admin/dashboard', [StaticDataController::class, 'staticDataDashboard'])->name('admin.dashboard');
+Route::get('/admin/books', [StaticDataController::class, 'staticDataBooks'])->name('admin.book');

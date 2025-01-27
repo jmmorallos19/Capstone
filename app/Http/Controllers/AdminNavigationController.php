@@ -46,4 +46,9 @@ class AdminNavigationController extends Controller
         return view('admin.audit_log');
     }
 
+    public function showProfile(){
+        
+        return view('admin.profile');
+    }
+
 }

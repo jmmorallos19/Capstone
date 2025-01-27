@@ -1,0 +1,8 @@
+:root{
+    --main-color: #193c71;
+}
+
+.title{
+    color: var(--main-color);
+}
+

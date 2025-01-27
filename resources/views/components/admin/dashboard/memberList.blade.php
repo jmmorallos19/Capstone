@@ -9,9 +9,9 @@
     </div>
 </div>
 
-<div class="card-body pb-4" style="height: 35rem; border: 1px solid #c4c2c2;">
-    <table class="table table-striped">
-        <thead style="position: sticky; top: -6%;">
+<div class="card-body pt-0 pb-4" style="height: 39rem; border: 1px solid #c4c2c2;">
+    <table id="memberList" class="table table-striped"  style="height: 33rem; table-layout: fixed;">
+        <thead style="position: sticky; top: 0%;">
             <tr>
                 <th scope="col">Member No.</th>
                 <th scope="col">Name</th>
@@ -21,74 +21,14 @@
         </thead>
 
         <tbody class="pt-0">
+            @foreach ($datas as $data)
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
+                <td scope="row">{{ $data['name'] }}</td>
+                <td>{{ $data['home'] }}</td>
+                <td>{{ $data['office'] }}</td>
+                <td>{{ $data['age']}}</td>
+            </tr> 
+            @endforeach
         </tbody>
     </table>
 </div>

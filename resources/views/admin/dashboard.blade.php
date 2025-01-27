@@ -1,6 +1,6 @@
 <x-admin-layout>
     <div class="container-fluid p-0 d-flex flex-column-reverse flex-lg-row" style="column-gap: .5rem;">
-        <div class="table-container pe-0 ps-0 pt-0 pb-3 col w-100 mt-3 mt-md-0">
+        <div class="table-container pe-0 ps-0 pt-0 col w-100 mt-3 mt-md-0">
             <div class="card" style="height: 100%;"> 
 
                 <div class="col-12" style="background-color: #193c71;">

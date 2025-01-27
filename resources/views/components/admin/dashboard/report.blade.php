@@ -1,5 +1,5 @@
 <!-- HTML structure to display the total books -->
-<div class="col col-12 p-0" style="height: fit-content;">
+<div class="col col-12 p-0 pb-1 pt-1" style="height: fit-content;">
     <a href="/Thesis%20-v1/vendor/Admin/Catalog/catalog.php" style="text-decoration: none; color: inherit;">
         <div class="card" >
             <div class="card-header d-flex justify-content-between align-items-center">
@@ -19,7 +19,7 @@
     </a>
 </div>
 
-<div class="col col-12 p-0" style=" height: fit-content;">
+<div class="col col-12 p-0 pt-1 pb-1" style=" height: fit-content;">
     <div class="card">
         <div class="card-header d-flex align-items-center justify-content-between">
             <h2>21</h2>
@@ -36,7 +36,8 @@
         </div>
     </div>
 </div>
-<div class="col col-12 p-0" style="height: fit-content;">
+
+<div class="col col-12 p-0 pt-1 pb-1" style="height: fit-content;">
     <div class="card">
         <div class="card-header d-flex align-items-center justify-content-between">
             <h2>16</h2>
@@ -54,8 +55,9 @@
         </div>
     </div>
 </div>
+
 <!-- HTML structure to display the total members -->
-<div class="col col-12 p-0" style=" height: fit-content;">
+<div class="col col-12 p-0 pt-1 pb-1" style=" height: fit-content;">
     <a href="#" style="text-decoration: none; color: inherit;">
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center " >

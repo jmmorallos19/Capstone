@@ -54,22 +54,24 @@
         </div>
 
         <!-- Settings Dropdown -->
-        <div class="dropdown">
+        <div class="dropdown" >
             <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-gear-fill fs-5"></i>
             </button>
 
-            <ul class="dropdown-menu dropdown-menu-end mt-2 pt-2" aria-labelledby="dropdownMenuButton">
-                <li>
-                    <a class="dropdown-item p-2 text-center" href="/Thesis -v1/vendor/Admin/Profile/profile.php">
-                        <i class="bi bi-person-fill" style="font-size: 1.4rem;"></i>
+            <ul class="dropdown-menu dropdown-menu-end mt-2 pt-2" aria-labelledby="dropdownMenuButton" style="background-color: #193c71 !important;">
+                <li class="header-dropdown">
+                    <a class="dropdown-item p-2 text-center
+                        {{Route::currentRouteName() == 'admin.profile' ? 'disable' : ''}}" 
+                    href="{{ Route::currentRouteName() == 'admin.profile' ? '#' : route('admin.profile') }}">
+                        <i class="bi bi-person-fill"></i>
                         <span class="ms-2">Profile</span>
                     </a>
                 </li>
-                <li>
-                    <a class="dropdown-item p-2 text-center" href="{{ route('login') }}" data-bs-toggle="modal" data-bs-target="#logoutModal">
-                        <i class="bi bi-box-arrow-in-left" style="font-size: 1.2rem;"></i>
-                        <span class="">Logout</span>
+                <li class="header-dropdown">
+                    <a class="dropdown-item p-2 text-center" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                        <i class="bi bi-box-arrow-in-left"></i>
+                        <span>Logout</span>
                     </a>
                 </li>
             </ul>
@@ -88,7 +90,7 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                             <!-- Redirect to logout logic when confirmed -->
-                            <a href="?logout=true" class="btn" style="background-color: #193c71; color: white;">Log Out</a>
+                            <a href="{{ route('login') }}" class="btn" style="background-color: #193c71; color: white;">Log Out</a>
                         </div>
                     </div>
                 </div>

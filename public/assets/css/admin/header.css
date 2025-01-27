@@ -1,9 +1,9 @@
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    padding: 1rem 1rem;
+    padding: 1rem;
 }
 
 /* Notification */
@@ -51,3 +51,16 @@
     color: #555;
 }
 
+.header-dropdown > a > i{
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+
+.header-dropdown > a > span{
+    color: #fff;
+}
+
+.header-dropdown > a:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
