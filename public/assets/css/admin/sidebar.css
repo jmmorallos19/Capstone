@@ -83,7 +83,10 @@ a {
     padding: 1.5rem 1.5rem .375rem;
 }
 
-a.sidebar-link {
+
+
+a.sidebar-link, 
+form > button.sidebar-link{
     padding: .625rem 1.625rem;
     color: #FFF;
     position: relative;
@@ -93,13 +96,45 @@ a.sidebar-link {
     text-decoration: none;
 }
 
-a.sidebar-link:hover {
+a.profile-link{
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    position: relative;
+    transition: all 0.35s;
+    display: block;
+    font-size: 1rem;
+    text-decoration: none;
+    column-gap: .5rem;
+}
+
+.user-profile{
+    width: 40px;
+    border-radius: 5px;
+}
+
+.user-name{
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.user-role{
+    color: rgb(179, 179, 179);
+    font-size: .8rem;
+}
+
+a.sidebar-link:hover,
+a.profile-link:hover,
+form:hover{
     background-color: #f9f6f630;
 }
 
 a.sidebar-link.active{
     background: var(--secondary-color);
     color: var(--primary-color);
+}
+
+a.profile-link.active{
+    background-color: #f9f6f630;
 }
 
 .sidebar-link[data-bs-toggle="collapse"]::after {

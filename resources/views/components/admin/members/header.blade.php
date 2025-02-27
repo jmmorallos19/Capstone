@@ -6,8 +6,19 @@
         <p class="m-0">Manage your library members here.</p>
     </div>
 
-    <div class="col col-12 col-md-6 pt-2 pt-md-0 books-btn-container d-flex align-items-center pe-3 justify-content-start justify-content-md-end  gap-2">
-        <button class="btn button-2">Add Member</button>
+    <div class="col col-12 col-md-6 pt-2 pt-md-0 books-btn-container d-flex align-items-center pe-3 justify-content-start justify-content-md-end gap-1">
+        {{-- Add Member Modal --}}
+        <button class="btn button-2 ms-3" type="button" data-bs-toggle="modal" data-bs-target="#addMemberModal">Add Member</button>
+        @includeIf('components.addMemberModal')
+
+        {{-- Borrow Book Modal --}}
+        <button class="w-min-fit btn button-2 " style="white-space: nowrap;" type="button" data-bs-toggle="modal" data-bs-target="#borrowModal">Lend</button>
+        @includeIf('components.borrowModal')
+
+        {{-- Return Book Modal --}}
+        <button class="w-min-fit btn button-2 " style="white-space: nowrap;" type="button" data-bs-toggle="modal" data-bs-target="#returnModal">Return</button>
+        @includeIf('components.returnModal')
+
         <button class="btn button-2" onclick="location.reload()">
             <i class="bi bi-arrow-clockwise"></i> Refresh
         </button>

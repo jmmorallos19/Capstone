@@ -6,8 +6,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Auth\CanResetPassword;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
@@ -18,9 +21,18 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
+        'firstname',
+        'middlename',
+        'lastname',
+        'school_email',
+        'phone',
+        'image_url',
         'email',
+        'staff_email',
+        'staff_school_email',
+        'status',
         'password',
+        'token_expiration'
     ];
 
     /**
@@ -44,5 +56,25 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function auditLog()
+    {
+        return $this->hasMany(AuditLog::class);
+    }
+
+    public function notification()
+    {
+        return $this->hasMany(Notification::class);
+    }
+
+    public function memberBook()
+    {
+        return $this->hasMany(memberBook::class);
+    }
+
+    public function history()
+    {
+        return $this->hasMany(History::class);
     }
 }
