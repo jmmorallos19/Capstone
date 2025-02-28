@@ -6,6 +6,9 @@ th {
   padding-left: 1rem !important;
   background-color: #193c71 !important;
   color: #fff !important;
+  white-space: nowrap;
+  text-overflow: ellipsis !important;
+  overflow: hidden; /* Hide the overflowed text */
 }
 
 tbody tr {
@@ -24,6 +27,7 @@ tbody tr td {
   height:  48.6875px !important;
   max-height:  48.6875px !important;
 }
+
   
 .dt-layout-full{
     height: 32rem;
@@ -104,16 +108,34 @@ tbody tr td {
     overflow-x: auto;                   /* Enable horizontal scrolling */
 }
 
+.dt-length > label{
+  display: none;
+}
+
+
+@media screen and (min-width: 879px){
+    .dt-search,
+    .dt-length{
+      margin-bottom: .5rem;
+      margin-top: .5rem;
+    }
+}
+
 @media (max-width: 768px) {
   .table th, .table td {
     font-size: 0.875rem; /* Adjust font size on small screens */
   }
 
-  #dt-search-0{
-    width: 25rem;
-    border: 1px solid gray;
-    margin-right: .5rem;
-}
+  #dt-search-0,
+  #dt-search-1,
+  #dt-search-2,
+  #dt-search-3,
+  #dt-search-4,
+  #dt-search-5{
+      width: 25rem;
+      border: 1px solid gray;
+      margin-right: .5rem;
+  }
 
 }
 
@@ -122,11 +144,29 @@ tbody tr td {
       padding: 0.5rem;  /* Reduce padding for very small screens */
     }
 
-    #dt-search-0{
-      width: 20rem;
-      border: 1px solid gray;
-      margin-right: .5rem;
-  }
+    #dt-search-0,
+    #dt-search-1,
+    #dt-search-2,
+    #dt-search-3,
+    #dt-search-4,
+    #dt-search-5{
+          width: 20rem;
+          border: 1px solid gray;
+          margin-right: .5rem;
+      }
 
+}
+
+@media (max-width: 375px){
+    #dt-search-0,
+    #dt-search-1,
+    #dt-search-2,
+    #dt-search-3,
+    #dt-search-4,
+    #dt-search-5{
+          width: 15rem;
+          border: 1px solid gray;
+          margin-right: .5rem;
+      }
 }
   

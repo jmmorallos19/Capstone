@@ -1,11 +1,11 @@
 <!-- Available Books Tab -->
-<div class="card-header d-flex justify-content-start pe-4 ps-3 pt-3 pb-3"
+{{-- <div class="card-header d-flex justify-content-start pe-4 ps-3 pt-3 pb-3"
     style="border-bottom:  1px solid #c4c2c2">
 
     <h3 class="m-0">Available Books</h3>
 
-</div>
-<div class="card-body pt-0 pb-4" style="height: 39rem; border: 1px solid #c4c2c2;">
+</div> --}}
+<div class="card-body pt-0" style=" border: 1px solid #c4c2c2;">
     <table id="availableBooks" class="table table-striped"  style="height: 33rem; table-layout: fixed;">
         <thead style="position: sticky; top: 0%;">
             <tr>
@@ -16,11 +16,11 @@
         </thead>
 
         <tbody class="pt-0">
-            @foreach ($datas as $data)
+            @foreach ($books as $book)
             <tr>
-                <td scope="row">{{ $data['name'] }}</td>
-                <td>{{ $data['home'] }}</td>
-                <td>{{ $data['office'] }}</td>
+                <td scope="row">{{ $book->accession_no }}</td>
+                <td>{{ $book->title }}</td>
+                <td>{{ $book->author }}</td>
             </tr> 
             @endforeach
         </tbody>

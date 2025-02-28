@@ -29,7 +29,8 @@
 }
 
 .table-container{
-    height: 760px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
 .card-header h3{
@@ -40,3 +41,82 @@
     height: inherit;
     overflow: hidden;
 }
+
+#bookCopyTableContainer::-webkit-scrollbar {
+  width: 1rem;  /* Width for vertical scrollbar */
+  height: 1rem; /* Height for horizontal scrollbar */
+
+}
+
+#bookCopyTableContainer::-webkit-scrollbar-track {
+  background-color: #f1f1f1;  /* Light grey */
+  border-radius: 10px;
+}
+
+/* Style the thumb (the draggable part of the scrollbar) */
+#bookCopyTableContainer::-webkit-scrollbar-thumb {
+  background-color: #193c71;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;  /* Optional: adds space around the thumb */
+  visibility: hidden;
+}
+
+/* Hover effect for the thumb */
+#bookCopyTableContainer:hover::-webkit-scrollbar-thumb {
+  background-color: #193c71;  /* Darker grey */
+  visibility: visible;
+}
+
+
+
+#topBorrowersTable::-webkit-scrollbar {
+  width: 1rem;  /* Width for vertical scrollbar */
+  height: 1rem; /* Height for horizontal scrollbar */
+
+}
+
+#topBorrowersTable::-webkit-scrollbar-track {
+  background-color: #f1f1f1;  /* Light grey */
+  border-radius: 10px;
+}
+
+/* Style the thumb (the draggable part of the scrollbar) */
+#topBorrowersTable::-webkit-scrollbar-thumb {
+  background-color: #193c71;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;  /* Optional: adds space around the thumb */
+  visibility: hidden;
+}
+
+/* Hover effect for the thumb */
+#topBorrowersTable:hover::-webkit-scrollbar-thumb {
+  background-color: #193c71;  /* Darker grey */
+  visibility: visible;
+}
+
+
+#topBorrowedTable::-webkit-scrollbar {
+  width: 1rem;  /* Width for vertical scrollbar */
+  height: 1rem; /* Height for horizontal scrollbar */
+
+}
+
+#topBorrowedTable::-webkit-scrollbar-track {
+  background-color: #f1f1f1;  /* Light grey */
+  border-radius: 10px;
+}
+
+/* Style the thumb (the draggable part of the scrollbar) */
+#topBorrowedTable::-webkit-scrollbar-thumb {
+  background-color: #193c71;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;  /* Optional: adds space around the thumb */
+  visibility: hidden;
+}
+
+/* Hover effect for the thumb */
+#topBorrowedTable:hover::-webkit-scrollbar-thumb {
+  background-color: #193c71;  /* Darker grey */
+  visibility: visible;
+}
+
